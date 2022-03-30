@@ -1,0 +1,137 @@
+
+#corpo {
+    margin-top: -19%;
+    display: flex;
+    flex-direction: column;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+html {
+    background-color:rgb(116, 114, 114) ;
+}
+
+body {
+    display:;
+    max-width: 800px;
+    margin: auto;
+    padding: 200px 20px;
+    box-shadow: 0px 0px 11px 7px;
+    background-color: #d3d3d3
+    
+}
+
+
+
+#nome { 
+    text-align: center;
+    background-color: rgb(248, 248, 248);
+    padding: 10px 0px;
+    border-radius: 20px;
+    
+  
+  
+    
+}   
+
+
+
+#perfil {
+    float:left;
+    
+
+}
+
+
+#lista {
+    flex-direction: row;
+    gap: 10px;  
+    font-size: 1.2em;
+    margin-top: 10px;
+    padding: 30px 100px 30px 1px;
+   
+
+}
+
+
+#Cabeçalho {
+    display: flex;
+    flex-direction: row;
+ 
+    justify-content: space-around;
+}
+
+#perf {
+    width: 250px;
+    height: 250px;
+    float: left;
+    border-radius:300px ;
+    border: 2px solid black;
+    margin: 30px 0px 0px 100px;
+
+
+}
+
+.list-item-name {
+    color: rgb(170, 78, 78);
+}
+
+#foto_perfil {
+    height: 150px;
+    border-radius: 60px;
+    border: 3px solid #334018;
+    text-align: left;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.linha-horizontal {
+    width: 500px;
+    border: 1px solid #000;
+    position:absolute;
+    margin-top: 130px;
+    margin-left:-50px;
+
+  
+
+}
+
+.linha-horizontal2{
+    width: 500px;
+    border: 1px solid #000;
+    position: absolute;
+    margin-top: 259px;
+    margin-left: -50px;
+}
+
+#objetivo {
+    display: flex;
+    float: left;
+    margin-top: 107px;
+    margin-left: -264px;
+    font-size: 40px;
+}
+
+#objetivo-ansker {
+    display: flex;
+    float: left;
+    margin-top: -61px;
+    margin-left: 7px;
+    font-size: 20px;
+}
+
+
+.central {
+    display: flex;
+}
+
+#formação{
+    display: flex;
+    float: left;
+    margin-top: 43px;
+    margin-left: -415px;
+    font-size: 50px;
+}
