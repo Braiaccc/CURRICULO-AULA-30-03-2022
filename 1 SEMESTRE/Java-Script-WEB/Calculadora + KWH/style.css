@@ -1,0 +1,33 @@
+body{
+    background: lightgray;
+
+}
+
+.container{
+
+    display: flex;
+    text-align: center; 
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    
+}
+
+.allCalc{
+    background:orange ;
+    border: 1px solid;
+}
+
+.buttonsCalc{
+    padding: 15px;
+}
+
+.buttonsCalc p{
+    font-size: 30px;
+}
+
+.kwh {
+    background: yellow;
+    border: 1px solid;
+}

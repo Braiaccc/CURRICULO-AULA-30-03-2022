@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!--JQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!--calculadora normal-->
+
+        <form action="#" class="allCalc">
+            <h1>Calculadora</h1>
+
+            <div class="calculadora">
+
+                <p>primeiro numero</p>
+                <input id="n1" type="number"><br>
+                <select class="form-select" id="operacao"> <!--OPERAÇAO-->
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                </select>
+                <p>segundo numero</p>
+                <input id="n2" type="number"><br>
+
+            </div>
+            <button id="calcular">
+                CALCULAR
+            </button>
+
+            <!-- <div id="buttonsCalc">
+                <button id="somar">Somar</button>
+                <button id="subtrair">Subtrair</button>
+                <button id="dividir">Dividir</button>
+                <button id="multiplicar">Multiplicar</button>
+                 <p>Resultado: <span></span></p>  
+            </div> -->
+
+
+            <br>
+
+            <textarea style="resize: none" id="resultado"  readonly></textarea>
+        </form>
+
+
+        <!--Calculado kwh-->
+        <div class="containerKwh">
+
+            <form action="#" class="kwh">
+                <h1>Calculadora kwh</h1>
+
+                <p>Digite o consumo de kwh da casa</p>
+
+                <input id="nw1" type="number"><br>
+
+                <p>Valor do kwh</p>
+
+                <input id="nw2" type="number"><br>
+
+                <button id="calcularKwh" type="submit">=</button><br>
+                <!--TIRANDO O ONCLICK PARA ADD NO JQUERY-->
+
+                <textarea style="resize: none" name="valor-final" id="valorFinal" cols="30" rows="5"
+                    readonly></textarea>
+            </form>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script src="kwhButton.js"></script>
+</body>
+
+
+
+</html>

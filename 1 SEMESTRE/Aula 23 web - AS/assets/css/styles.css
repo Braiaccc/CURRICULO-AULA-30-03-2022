@@ -1,0 +1,90 @@
+body{
+  background: rgb(1, 11, 20);
+  color: white;
+}
+
+.articleHome{
+  display: inline-block;
+
+}
+
+.cabecalho img{
+  height: 100px;
+  padding: 10px;  
+}
+.banner img{
+   display: inline-block;
+   max-width: 1400px;
+   width: 100%;
+   height: auto;
+}
+
+#destaques{
+  background-color: white; 
+
+}
+
+#destaques img{
+  max-width: 200px;
+  width: 100%;
+  width: auto;
+  height: auto;
+  display: inline-block;
+}
+
+#destaqueHome{
+  background:rgb(255, 101, 0);
+  color: white;
+}
+
+.row img{
+  width: 302px;
+  height: 302px;
+}
+
+.row a{
+  text-decoration: none;
+  color: black;
+}
+
+.backgroundHome{
+  background: white;
+}
+
+.backgroundHome img{
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+}
+
+#precoHome{
+  display: flex;
+  font-size: 30px;
+  color: rgb(255, 101, 0);
+  margin-top: 40px;
+}
+
+.nav{
+  color: white;
+}
+
+#propagandas img{
+  width: 230px;
+  height: 230px;
+  display: inline-block;
+  padding: 10px;
+}
+
+#propagandas {
+  width: fit-content;
+}
+
+.alturaContato{
+  padding-bottom: 190px;
+}
+
+.altura img{
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+}

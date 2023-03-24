@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+html{
+    background-color:#b4bf5e54;
+    font-family: Roboto, sans-serif;
+}
+
+body{
+    background-color: rgb(243, 240, 240);
+    max-width: 800px;
+    margin: auto;
+    padding: 10px 20px;
+    box-shadow: 0px 0px 11px 7px #000000a1;
+}
+
+header{
+    margin-bottom: 35px;
+}
+
+#titulo{
+    text-align: center;
+    background-color: #252617;
+    padding: 10px 0px 10px 0px;
+    border-radius: 20px;
+    margin: 15px;
+    color: #FFF;
+    transition: 0.5s;
+}
+
+#titulo:hover{
+    background: #334018;
+}
+
+#nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#lista{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.list-item-name{
+    color: #CAD959;
+    transition: 0.5s;
+}
+
+.list-item-name:hover{
+    color: #64732F;
+}
+
+li{
+    list-style: none;
+}
+
+#foto-perfil{
+    height: 150px;
+    border-radius: 75px;
+    border: 3px solid #334018;
+    transition: 1s;
+}
+
+#foto-perfil:hover{
+    border: 3px solid #64732F;
+}
+
+.titulos-iniciais{
+    font-style: Roboto, "sans-serif";
+    font-weight: 300;
+    font-size: 2em;
+    margin: 15px 0px;
+    text-transform: uppercase;
+}
+
+.title-div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.line{
+    background-color: #CAD959;
+    height: 3px;
+    width: 70%;
+    margin-left: 10px;
+}
+
+.paragrafo-obj{
+    margin: 15px 0px;
+    font-size: 1em;
+}

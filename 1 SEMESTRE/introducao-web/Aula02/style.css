@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    text-align: center;
+}
+
+body{
+    background: black;
+    color: #FFF;
+}
+
+header{
+    padding: 25px;
+}
+
+#imagem-frango{
+    background-color: #800080;
+    margin: auto;
+    max-width: 450px;
+    height: 450px;
+    position: relative;
+    border-radius: 10px;
+}
+
+img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+div > p{
+    position: absolute;
+    left: 50%;
+    top: 96%;
+    transform: translate(-50%, -30%);   
+    text-transform: uppercase;
+}
+
+footer{
+    background: rgb(34, 32, 32);
+    margin-top: 112px;
+}

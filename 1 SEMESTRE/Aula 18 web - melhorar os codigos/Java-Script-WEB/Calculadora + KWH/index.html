@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!--calculadora normal-->
+
+        <form action="#" class="allCalc">
+            <h1>Calculadora</h1>
+
+            <div class="calculadora">
+
+                primeiro numero <br>
+                <input id="n1" type="number"><br>
+                segundo numero <br>
+                <input id="n2" type="number"><br>
+
+            </div>
+
+            <div class="buttonsCalc">
+
+                <button onclick="somar()">Somar</button>
+                <button onclick="subtrair()">Subtrair</button>
+                <button onclick="dividir()">Dividir</button>
+                <button onclick="multiplicar()">Multiplicar</button>
+                <p>Resultado: <span></span></p>
+            </div>
+        </form>
+
+        <!--Calculado kwh-->
+
+        <form action="#" class="kwh">
+            <h1>Calculadora kwh</h1>
+            <h3>preço do kwh: 0,85</h3>
+
+            <p>Digite o consumo de kwh da casa</p>
+
+            <input id="nw1" type="number"><br>
+
+            <p>Valor do kwh</p>
+
+            <input id="nw2" type="number"><br>
+
+            <button type="submit" onclick="kwhClick()">=</button><br>
+
+            <textarea style="resize: none;" name="valor-final" id="valorFinal" cols="30" rows="5" readonly></textarea> 
+
+        </form>
+
+    </div>
+
+    <script src="script.js"></script>
+
+    <script src="kwhButton.js"></script>
+</body>
+
+
+
+</html>

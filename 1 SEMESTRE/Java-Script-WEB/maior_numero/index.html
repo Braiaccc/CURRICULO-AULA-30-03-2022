@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../form-global.css">
+    <title>Maior Número</title>
+</head>
+<body>
+    <h1>Maior Número</h1>
+    <div class="form-container">
+        <form action="#">
+            <div>
+                <label for="numeros">Digite várias números separados por vírgulas:</label>
+                <input type="text" id="numeros" name="numeros">
+            </div>
+            <button type="submit" onclick="encontrarMaiorNumero()">Verificar</button>
+            <textarea name="numero-final" id="numero-final" cols="30" rows="5"></textarea>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

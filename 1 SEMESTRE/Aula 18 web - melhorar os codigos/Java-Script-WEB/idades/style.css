@@ -1,0 +1,28 @@
+body {
+    background-color: #74BFF6;
+    
+}
+
+h1{
+    display: flex;
+   justify-content: center;
+   color: #B474F6;
+   background-color: #DABEF7;
+}
+
+label{
+    color: #7C63D4;
+    background-color:#B3A9DB ;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+form button {
+    margin-top: 10px;
+}
+

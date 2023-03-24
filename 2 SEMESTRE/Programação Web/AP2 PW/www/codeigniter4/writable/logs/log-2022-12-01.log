@@ -1,0 +1,12 @@
+CRITICAL - 2022-12-01 17:02:37 --> Class "App\Controllers\Admin\ContactModel" not found
+in APPPATH/Controllers/Admin/Client.php on line 22.
+ 1 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Admin\Client->listContacts()
+ 2 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Client))
+ 3 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-01 17:03:36 --> Class "App\Controllers\Admin\ContactModel" not found
+in APPPATH/Controllers/Admin/Client.php on line 22.
+ 1 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Admin\Client->listContacts()
+ 2 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Client))
+ 3 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,47 @@
+body{
+    background: lightgray;
+
+}
+
+.container{
+    padding: 50px;
+    display: flex;
+    text-align: center; 
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.allCalc{
+    background:orange ;
+    border: 1px solid;
+    padding: 23px;
+}
+
+#resultado{
+    height: 75px;
+    width: 237px;
+}
+
+#operacao{
+    padding: 1px;
+    font-size: 20px;
+    margin-top: 10px;   
+}
+
+#calcular{
+    margin: 20px;
+}
+
+.kwh {
+    background: yellow;
+    border: 1px solid;
+}
+
+.kwh #calcularKwh{
+    margin: 10px 10px;
+}
+
+form.kwh{
+    padding: 22.8px;
+}
