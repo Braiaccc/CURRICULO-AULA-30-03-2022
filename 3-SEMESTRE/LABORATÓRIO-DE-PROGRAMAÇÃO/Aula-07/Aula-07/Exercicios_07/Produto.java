@@ -1,20 +1,15 @@
-/*      Crie um programa Java para gerenciar uma loja de produtos utilizando classes, objetos,
-        métodos e atributos. O objetivo é criar um sistema que permita cadastrar produtos, exibir os
-        produtos disponíveis, realizar vendas e gerenciar o estoque. Nesta versão simplificada, não
-        usaremos Scanner e ArrayLists.   */
-
-/*        1. Crie uma classe chamada "Produto" com os seguintes atributos e métodos:
-        • Atributos:
-        • nome (String)
-        • preco (double)
-        • quantidade (int)
-        • Métodos:
-        • Getters e Setters */
 public class Produto {
-    String nome;
-    double preco;
-    int quantidade;
-
+    
+    private String nome;
+    private double preco;
+    private int quantidade;
+    
+    public Produto(String nome, double preco, int quantidade) {
+        this.nome = nome;
+        this.preco = preco;
+        this.quantidade = quantidade;
+    }
+    
     public String getNome() {
         return nome;
     }
@@ -37,5 +32,5 @@ public class Produto {
 
     public void setQuantidade(int quantidade) {
         this.quantidade = quantidade;
-    }
+    }   
 }
