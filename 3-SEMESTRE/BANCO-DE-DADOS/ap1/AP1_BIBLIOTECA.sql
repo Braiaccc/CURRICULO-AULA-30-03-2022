@@ -59,6 +59,7 @@ CREATE TABLE livros_generos(
 CREATE TABLE aluguel_livros(
     id_livro INT,
     id_aluguel INT,
+    preco DECIMAL(10, 2),
     CONSTRAINT fk_aluguel_livros_livro
     FOREIGN KEY(id_livro) REFERENCES livros(id)
         ON UPDATE CASCADE
