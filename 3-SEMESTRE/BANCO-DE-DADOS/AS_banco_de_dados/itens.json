@@ -1,0 +1,43 @@
+{
+    "_id": 1,
+    "nome": "pizza",
+    "sabores": [
+        {"sabor": "calabresa", "tamanhos": 
+            [{"tamanho": "P", "valor":89.90},
+            {"tamanho": "M", "valor": 100},
+            {"tamanho": "G", "valor": "120"}]
+        },
+        {"sabor": "chocolate", "tamanhos": 
+            [{"tamanho": "P", "valor":89.90},
+            {"tamanho": "M", "valor": 100},
+            {"tamanho": "G", "valor": "120"}]},
+        {"sabor": "bacon com milho", "tamanhos": 
+            [{"tamanho": "P", "valor":89.90},
+            {"tamanho": "M", "valor": 100},
+            {"tamanho": "G", "valor": "120"}]}
+    ]
+},
+{
+    "_id": 2,
+    "nome": "bebidas",
+    "sabores": [
+        {"sabor": "Coca-Cola", "estoque": 15, "tamanhos": 
+            [{"tamanho": "350ml", "valor":6},
+            {"tamanho": "1lt", "valor": 15},
+            {"tamanho": "2lt", "valor": "20"}]},
+        {"sabor": "Fanta", "estoque": 15, "tamanhos": 
+            [{"tamanho": "350ml", "valor":6},
+            {"tamanho": "1lt", "valor": 15},
+            {"tamanho": "2lt", "valor": "20"}]},
+        {"sabor": "Sprite", "estoque": 16, "tamanhos": 
+            [{"tamanho": "350ml", "valor":6},
+            {"tamanho": "1lt", "valor": 15},
+            {"tamanho": "2lt", "valor": "20"}]}
+]},
+{
+    "_id": 3,
+    "nome": "chiclete",
+    "sabores": [
+        {"sabor": "trident menta", "estoque": 10}
+    ]
+}
