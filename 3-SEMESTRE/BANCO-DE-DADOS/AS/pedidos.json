@@ -1,0 +1,47 @@
+{
+    "_id": 1,
+    "_idCliente": 1,
+    "itens": [
+        {"_idItem": 1, "qtd": 1, "valor": 89.90, "tamanho": "P", "sabores": ["cholate misto"]},
+        {"_idItem": 1, "qtd": 3, "valor": 120, "tamanho": "G", "sabores":["bacon com milho", "filé com fritas", "portuguesa"]},
+        {"_idItem": 2, "qtd": 2, "valor": 20, "tamanho": "1lt", "sabores":["Coca-Cola", "Sprite"]}
+    ],
+    "entrega": true,
+    "numeroMesa": null,
+    "endereco": {
+        "rua": "Rua 123",
+        "bairro": "Aquele la",
+        "numero": 123
+    },
+    "valorTotal": 489,
+    "dataEntrega": "2023-06-21"
+}
+{
+    "_id": 2,
+    "_idCliente": 1,
+    "itens": [
+        {"_idItem": 1, "qtd": 1, "valor": 89.90, "tamanho": "P", "sabores": ["cholate misto"]},
+        {"_idItem": 1, "qtd": 1, "valor": 89.90, "tamanho": "P", "sabores": ["portuguesa"]},
+        {"_idItem": 2, "qtd": 1, "valor": 20, "tamanho": "1lt", "sabores":["Coca-Cola"]}
+    ],
+    "entrega": false,
+    "numeroMesa": 3,
+    "endereco": null,
+    "valorTotal": 199.8,
+    "dataEntrega": null
+}
+{
+    "_id": 3,
+    "_idCliente": 2,
+    "itens": [
+        {"_idItem": 1, "qtd": 1, "valor": 89.90, "tamanho": "P", "sabores": ["portuguesa"]},
+        {"_idItem": 2, "qtd": 1, "valor": 20, "tamanho": "1lt", "sabores":["Sprite"]}
+    ],
+    "entrega": false,
+    "numeroMesa": 24,
+    "endereco": null,
+    "valorTotal": 109.9,
+    "dataEntrega": null
+}
+
+
