@@ -1,0 +1,31 @@
+{
+    "pizza": {
+        "_id": 1,
+        "nome": "pizza",
+        "sabores": [
+            {"sabor": "calabresa", "tamanhos": [{"tamanhos": "P", "valor": 89.90}]},
+            {"sabor": "chocolate", "tamanhos": [{"tamanhos": "M", "valor": 100}]},
+            {"sabor": "bacon com milho", "tamanhos": [{"tamanhos": "P", "valor": 120}]}
+        ]
+    },
+    "refri": {
+        "_id": 2,
+        "sabores": [
+            {"sabor": "Coca-Cola","estoque": 15},
+            {"sabor": "Fanta","estoque": 15},
+            {"sabor": "Sprite","estoque": 16}
+        ],
+        "tamanhos": [
+            {"tamanhos": "350ml","estoque": 6},
+            {"tamanhos": "1lt","estoque": 16},
+            {"sabor": "2lt","estoque": 20}
+        ]
+    },
+    "agua":{
+        "_id": 3,
+        "sabores": ["com gás", "mineral"],
+        "tamanhos": [
+            {"tamanho": "500ml", "valor": 3}
+        ]
+    }
+}

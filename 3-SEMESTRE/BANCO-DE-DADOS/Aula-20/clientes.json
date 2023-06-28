@@ -1,0 +1,18 @@
+{
+    "_id": 1,
+    "nome": "Bryan Safadão",
+    "enderecos": [
+        {
+            "rua": "Rua 123",
+            "bairro": "Aquele la",
+            "numero": 123
+        },
+        {
+            "rua": "General Osório",
+            "bairro": "Santa Luzia",
+            "numero": 2929
+        }
+    ],
+    "telefones": ["51923664988", "51928524157", "51938894586"]
+    
+}

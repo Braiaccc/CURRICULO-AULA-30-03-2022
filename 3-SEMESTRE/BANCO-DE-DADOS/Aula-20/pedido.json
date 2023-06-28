@@ -1,0 +1,32 @@
+{
+"pedido1": {
+  "_idCliente": 1,
+  "itens":[
+      {"_idItem": 1, "qtd":1, "valor": 89.90, "tamanho": "P", "sabores": ["chocolate misto"]},
+      {"_idItem": 1, "qtd":3, "valor": 120, "tamanho": "g", "sabores": ["banco com milho", "filé com fritas"]},
+      {"_idItem": 2, "qtd":2, "valor": 20, "tamanho": "1lt", "sabores": ["Coca-Cola", "Sprite"]}
+  ],
+  "entrega": true,
+  "numeroMesa": null,
+  "endereco": {
+      "rua": "Rua 123",
+      "bairro": "Aquela la",
+      "numero": 123
+  },
+  "valorTotal" : 489,
+  "dataEntrega": "2023-06-21"
+},
+"pedido2": {
+  "_idCliente": 1,
+  "itens": [
+      {"_idItem": 1, "qtd":1, "valor": 89.90, "tamanho": "P", "sabores": ["chocolate misto"]},
+      {"_idItem": 1, "qtd":1, "valor": 89.90, "tamanho": "P", "sabores": ["portuguesa"]},
+      {"_idItem": 2, "qtd":1, "valor": 20, "tamanho": "1lt", "sabores": ["Coca-Cola"]}
+  ],
+    "entrega": false,
+    "numeroMesa": 3,
+    "endereco": null,
+    "valorTotal" : 378,
+    "dataEntrega": "2023-06-21"
+}
+}
