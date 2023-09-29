@@ -1,0 +1,20 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+from keras.models import Sequential
+from keras.layers import Dense
+
+dataset = pd.read_csv('dataset/admission_dataset.csv')
+y = dataset['Chance of Admit'] # Chance de admissão
+x = dataset.drop('Chance of Admit', axis = 1) # Resto do arquivo csv
+
+x_treino, x_teste = x[0:300], x[300:]
+y_treino, y_teste = y[0:300],  y[300:]
+
+modelo = Sequential()
+modelo.add(Dense(units=100, activation='relu', input_dim=7))
+modelo.add(Dense(units=1, activation='linear'))
+
+modelo.compile(loss='mse', optimizer='adam', metrics=['mae'])
+
+
+resultado = modelo.fit(x_treino, y_treino, epochs=200, batch_size=32,  validation_data=(x_teste, y_teste))
