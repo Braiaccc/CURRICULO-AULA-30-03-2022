@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sistema Especialista</title>
+</head>
+<body>
+    <h1>Sistema Especialista de Saúde</h1>
+    <p>Insira os sintomas:</p>
+    <label for="anemia">Anemia:</label>
+    <select id="anemia">
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+    </select>
+    <br>
+    <label for="diarreia">Diarreia:</label>
+    <select id="diarreia">
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+    </select>
+    <br>
+    <label for="febre">Febre:</label>
+    <select id="febre">
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+    </select>
+    <br>
+    <label for="perdaApetite">Perda de Apetite:</label>
+    <select id="perdaApetite">
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+    </select>
+    <br>
+    <label for="palidez">Palidez:</label>
+    <select id="palidez">
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+    </select>
+    <br>
+    <label for="perdaPeso">Perda de Peso:</label>
+    <select id="perdaPeso">
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+    </select>
+    <br>
+    <button onclick="avaliarSintomas()">Avaliar Sintomas</button>
+    <p>Resultado: <span id="resultado"></span></p>
+
+    <script>
+        var regras = [
+            {
+                condicoes: [
+                    { sintoma: "anemia", valor: "sim" },
+                    { sintoma: "diarreia", valor: "sim" },
+                    { sintoma: "febre", valor: "sim" }
+                ],
+                resultado: { felv: "sim", probabilidade: "90%" }
+            },
+            {
+                condicoes: [
+                    { sintoma: "anemia", valor: "nao" },
+                    { sintoma: "diarreia", valor: "sim" },
+                    { sintoma: "febre", valor: "sim" }
+                ],
+                resultado: { felv: "sim", probabilidade: "60%" }
+            },
+            {
+                condicoes: [
+                    { sintoma: "anemia", valor: "nao" },
+                    { sintoma: "diarreia", valor: "nao" },
+                    { sintoma: "febre", valor: "nao" }
+                ],
+                resultado: { felv: "nao", probabilidade: "90%" }
+            },
+            {
+                condicoes: [
+                    { sintoma: "perda de apetite", valor: "sim" },
+                    { sintoma: "palidez", valor: "sim" },
+                    { sintoma: "perda de peso", valor: "sim" }
+                ],
+                resultado: { anemia: "sim", probabilidade: "90%" }
+            },
+            {
+                condicoes: [
+                    { sintoma: "perda de apetite", valor: "sim" },
+                    { sintoma: "palidez", valor: "sim" },
+                    { sintoma: "perda de peso", valor: "nao" }
+                ],
+                resultado: { anemia: "sim", probabilidade: "70%" }
+            },
+            {
+                condicoes: [
+                    { sintoma: "perda de apetite", valor: "nao" },
+                    { sintoma: "palidez", valor: "nao" },
+                    { sintoma: "perda de peso", valor: "nao" }
+                ],
+                resultado: { anemia: "nao", probabilidade: "100%" }
+            }
+        ];
+
+        function avaliarSintomas() {
+            var anemia = document.getElementById("anemia").value;
+            var diarreia = document.getElementById("diarreia").value;
+            var febre = document.getElementById("febre").value;
+            var perdaApetite = document.getElementById("perdaApetite").value;
+            var palidez = document.getElementById("palidez").value;
+            var perdaPeso = document.getElementById("perdaPeso").value;
+
+            var resultado = "Não é possível determinar o resultado.";
+
+            for (var i = 0; i < regras.length; i++) {
+                var regra = regras[i];
+                var condicoesAtendidas = true;
+
+                for (var j = 0; j < regra.condicoes.length; j++) {
+                    var condicao = regra.condicoes[j];
+                    if (condicao.sintoma == "anemia" && condicao.valor != anemia) {
+                        condicoesAtendidas = false;
+                        break;
+                    }
+                    if (condicao.sintoma == "diarreia" && condicao.valor != diarreia) {
+                        condicoesAtendidas = false;
+                        break;
+                    }
+                    if (condicao.sintoma == "febre" && condicao.valor != febre) {
+                        condicoesAtendidas = false;
+                        break;
+                    }
+                    if (condicao.sintoma == "perda de apetite" && condicao.valor != perdaApetite) {
+                        condicoesAtendidas = false;
+                        break;
+                    }
+                    if (condicao.sintoma == "palidez" && condicao.valor != palidez) {
+                        condicoesAtendidas = false;
+                        break;
+                    }
+                    if (condicao.sintoma == "perda de peso" && condicao.valor != perdaPeso) {
+                        condicoesAtendidas = false;
+                        break;
+                    }
+                }
+
+                if (condicoesAtendidas) {
+                    resultado = "Resultado: " + regra.resultado.felv + " (" + regra.resultado.probabilidade + ")";
+                    break;
+                }
+            }
+
+            document.getElementById("resultado").textContent = resultado;
+        }
+    </script>
+</body>
+</html>

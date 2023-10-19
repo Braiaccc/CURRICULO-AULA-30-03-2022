@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sistema Especialista</title>
+</head>
+<body>
+    <h1>Sistema Especialista de Saúde</h1>
+    <p>Insira os sintomas:</p>
+    <label for="anemia">Anemia:</label>
+    <select id="anemia">
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+    </select>
+    <br>
+    <label for="febre">Febre:</label>
+    <select id="febre">
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+    </select>
+    <br>
+    <label for="contato">Contato:</label>
+    <select id="contato">
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+    </select>
+    <br>
+    <label for="alteracoes">Alterações:</label>
+    <select id="alteracoes">
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+    </select>
+    <br>
+    <label for="acessoRua">Acesso à Rua:</label>
+    <select id="acessoRua">
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+    </select>
+    <br>
+    <label for="dificuldadeRespiratorias">Dificuldade Respiratórias:</label>
+    <select id="dificuldadeRespiratorias">
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+    </select>
+    <br>
+    <label for="inflamacao">Inflamação:</label>
+    <select id="inflamacao">
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+    </select>
+    <br>
+    <label for="problemasOculares">Problemas Oculares:</label>
+    <select id="problemasOculares">
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+    </select>
+    <br>
+    <button onclick="avaliarSintomas()">Avaliar Sintomas</button>
+    <p>Resultado: <span id="resultado"></span></p>
+
+    <script>
+        var regras = [
+            {
+                condicoes: [
+                    { sintoma: "anemia", valor: "sim" },
+                    { sintoma: "febre", valor: "sim" },
+                    { sintoma: "contato", valor: "sim" },
+                    { sintoma: "alteracoes", valor: "sim" },
+                    { sintoma: "acessoRua", valor: "sim" },
+                    { sintoma: "dificuldadeRespiratorias", valor: "sim" },
+                    { sintoma: "inflamacao", valor: "sim" },
+                    { sintoma: "problemasOculares", valor: "sim" }
+                ],
+                resultado: { doenca: "felv", probabilidade: "90%" }
+            },
+            {
+                condicoes: [
+                    { sintoma: "anemia", valor: "sim" },
+                    { sintoma: "febre", valor: "sim" },
+                    { sintoma: "contato", valor: "sim" },
+                    { sintoma: "alteracoes", valor: "sim" },
+                    { sintoma: "acessoRua", valor: "sim" },
+                    { sintoma: "dificuldadeRespiratorias", valor: "sim" },
+                    { sintoma: "inflamacao", valor: "sim" },
+                    { sintoma: "problemasOculares", valor: "nao" }
+                ],
+                resultado: { doenca: "felv", probabilidade: "80%" }
+            },
+            {
+                condicoes: [
+                    { sintoma: "anemia", valor: "sim" },
+                    { sintoma: "febre", valor: "sim" },
+                    { sintoma: "contato", valor: "sim" },
+                    { sintoma: "alteracoes", valor: "sim" },
+                    { sintoma: "acessoRua", valor: "sim" },
+                    { sintoma: "dificuldadeRespiratorias", valor: "sim" },
+                    { sintoma: "inflamacao", valor: "nao" },
+                    { sintoma: "problemasOculares", valor: "nao" }
+                ],
+                resultado: { doenca: "felv", probabilidade: "70%" }
+            },
+            {
+                condicoes: [
+                    { sintoma: "anemia", valor: "sim" },
+                    { sintoma: "febre", valor: "sim" },
+                    { sintoma: "contato", valor: "sim" },
+                    { sintoma: "alteracoes", valor: "sim" },
+                    { sintoma: "acessoRua", valor: "sim" },
+                    { sintoma: "dificuldadeRespiratorias", valor: "sim" },
+                    { sintoma: "inflamacao", valor: "nao" },
+                    { sintoma: "problemasOculares", valor: "nao" }
+                ],
+                resultado: { doenca: "felv", probabilidade: "60%" }
+            },
+            {
+                condicoes: [
+                    { sintoma: "anemia", valor: "sim" },
+                    { sintoma: "febre", valor: "sim" },
+                    { sintoma: "contato", valor: "sim" },
+                    { sintoma: "alteracoes", valor: "sim" },
+                    { sintoma: "acessoRua", valor: "nao" },
+                    { sintoma: "dificuldadeRespiratorias", valor: "nao" },
+                    { sintoma: "inflamacao", valor: "nao" },
+                    { sintoma: "problemasOculares", valor: "nao" }
+                ],
+                resultado: { doenca: "felv", probabilidade: "50%" }
+            },
+            {
+                condicoes: [
+                    { sintoma: "anemia", valor: "sim" },
+                    { sintoma: "febre", valor: "sim" },
+                    { sintoma: "contato", valor: "sim" },
+                    { sintoma: "alteracoes", valor: "nao" },
+                    { sintoma: "acessoRua", valor: "nao" },
+                    { sintoma: "dificuldadeRespiratorias", valor: "nao" },
+                    { sintoma: "inflamacao", valor: "nao" },
+                    { sintoma: "problemasOculares", valor: "nao" }
+                ],
+                resultado: { doenca: "felv", probabilidade: "40%" }
+            },
+            {
+                condicoes: [
+                    { sintoma: "anemia", valor: "sim" },
+                    { sintoma: "febre", valor: "sim" },
+                    { sintoma: "contato", valor: "nao" },
+                    { sintoma: "alteracoes", valor: "nao" },
+                    { sintoma: "acessoRua", valor: "nao" },
+                    { sintoma: "dificuldadeRespiratorias", valor: "nao" },
+                    { sintoma: "inflamacao", valor: "nao" },
+                    { sintoma: "problemasOculares", valor: "nao" }
+                ],
+                resultado: { doenca: "felv", probabilidade: "30%" }
+            },
+            {
+                condicoes: [
+                    { sintoma: "anemia", valor: "sim" },
+                    { sintoma: "febre", valor: "nao" },
+                    { sintoma: "contato", valor: "nao" },
+                    { sintoma: "alteracoes", valor: "nao" },
+                    { sintoma: "acessoRua", valor: "nao" },
+                    { sintoma: "dificuldadeRespiratorias", valor: "nao" },
+                    { sintoma: "inflamacao", valor: "nao" },
+                    { sintoma: "problemasOculares", valor: "nao" }
+                ],
+                resultado: { doenca: "anemia", probabilidade: "90%" }
+            },
+            {
+                condicoes: [
+                    { sintoma: "anemia", valor: "nao" },
+                    { sintoma: "febre", valor: "sim" },
+                    { sintoma: "contato", valor: "nao" },
+                    { sintoma: "alteracoes", valor: "nao" },
+                    { sintoma: "acessoRua", valor: "nao" },
+                    { sintoma: "dificuldadeRespiratorias", valor: "nao" },
+                    { sintoma: "inflamacao", valor: "nao" },
+                    { sintoma: "problemasOculares", valor: "nao" }
+                ],
+                resultado: { doenca: "apenas febre", probabilidade: "90%" }
+            },
+            {
+                condicoes: [
+                    { sintoma: "anemia", valor: "nao" },
+                    { sintoma: "febre", valor: "nao" },
+                    { sintoma: "contato", valor: "nao" },
+                    { sintoma: "alteracoes", valor: "nao" },
+                    { sintoma: "acessoRua", valor: "nao" },
+                    { sintoma: "dificuldadeRespiratorias", valor: "nao" },
+                    { sintoma: "inflamacao", valor: "nao" },
+                    { sintoma: "problemasOculares", valor: "nao" }
+                ],
+                resultado: { doenca: "nenhuma", probabilidade: "90%" }
+            },
+            {
+                condicoes: [
+                    { sintoma: "anemia", valor: "nao" },
+                    { sintoma: "febre", valor: "nao" },
+                    { sintoma: "contato", valor: "sim" },
+                    { sintoma: "alteracoes", valor: "sim" },
+                    { sintoma: "acessoRua", valor: "sim" },
+                    { sintoma: "dificuldadeRespiratorias", valor: "sim" },
+                    { sintoma: "inflamacao", valor: "sim" },
+                    { sintoma: "problemasOculares", valor: "sim" }
+                ],
+                resultado: { doenca: "outra", probabilidade: "90%" }
+            },
+            {
+                condicoes: [
+                    { sintoma: "anemia", valor: "nao" },
+                    { sintoma: "febre", valor: "nao" },
+                    { sintoma: "contato", valor: "nao" },
+                    { sintoma: "alteracoes", valor: "nao" },
+                    { sintoma: "acessoRua", valor: "nao" },
+                    { sintoma: "dificuldadeRespiratorias", valor: "sim" },
+                    { sintoma: "inflamacao", valor: "sim" },
+                    { sintoma: "problemasOculares", valor: "sim" }
+                ],
+                resultado: { doenca: "outra", probabilidade: "90%" }
+            },
+            {
+                condicoes: [
+                    { sintoma: "perdaApetite", valor: "sim" },
+                    { sintoma: "palidez", valor: "sim" },
+                    { sintoma: "inatividade", valor: "sim" },
+                    { sintoma: "perdaPeso", valor: "sim" },
+                    { sintoma: "sangramento", valor: "sim" }
+                ],
+                resultado: { doenca: "anemia", probabilidade: "90%" }
+            },
+            {
+                condicoes: [
+                    { sintoma: "perdaApetite", valor: "sim" },
+                    { sintoma: "palidez", valor: "sim" },
+                    { sintoma: "inatividade", valor: "sim" },
+                    { sintoma: "perdaPeso", valor: "sim" },
+                    { sintoma: "sangramento", valor: "nao" }
+                ],
+                resultado: { doenca: "anemia", probabilidade: "80%" }
+            },
+            {
+                condicoes: [
+                    { sintoma: "perdaApetite", valor: "sim" },
+                    { sintoma: "palidez", valor: "sim" },
+                    { sintoma: "inatividade", valor: "sim" },
+                    { sintoma: "perdaPeso", valor: "nao" },
+                    { sintoma: "sangramento", valor: "nao" }
+                ],
+                resultado: { doenca: "anemia", probabilidade: "70%" }
+            },
+            {
+                condicoes: [
+                    { sintoma: "perdaApetite", valor: "sim" },
+                    { sintoma: "palidez", valor: "sim" },
+                    { sintoma: "inatividade", valor: "nao" },
+                    { sintoma: "perdaPeso", valor: "nao" },
+                    { sintoma: "sangramento", valor: "nao" }
+                ],
+                resultado: { doenca: "anemia", probabilidade: "60%" }
+            },
+            {
+                condicoes: [
+                    { sintoma: "perdaApetite", valor: "sim" },
+                    { sintoma: "palidez", valor: "sim" },
+                    { sintoma: "inatividade", valor: "nao" },
+                    { sintoma: "perdaPeso", valor: "nao" },
+                    { sintoma: "sangramento", valor: "nao" }
+                ],
+                resultado: { doenca: "anemia", probabilidade: "50%" }
+            },
+            {
+                condicoes: [
+                    { sintoma: "perdaApetite", valor: "sim" },
+                    { sintoma: "palidez", valor: "sim" },
+                    { sintoma: "inatividade", valor: "nao" },
+                    { sintoma: "perdaPeso", valor: "nao" },
+                    { sintoma: "sangramento", valor: "nao" }
+                ],
+                resultado: { doenca: "anemia", probabilidade: "40%" }
+            },
+            {
+                condicoes: [
+                    { sintoma: "anemia", valor: "sim" },
+                    { sintoma: "febre", valor: "sim" },
+                    { sintoma: "contato", valor: "nao" },
+                    { sintoma: "alteracoes", valor: "nao" },
+                    { sintoma: "acessoRua", valor: "nao" },
+                    { sintoma: "dificuldadeRespiratorias", valor: "nao" },
+                    { sintoma: "inflamacao", valor: "nao" },
+                    { sintoma: "problemasOculares", valor: "nao" }
+                ],
+                resultado: { doenca: "felv", probabilidade: "30%" }
+            },
+            {
+                condicoes: [
+                    { sintoma: "anemia", valor: "nao" },
+                    { sintoma: "febre", valor: "nao" },
+                    { sintoma: "contato", valor: "nao" },
+                    { sintoma: "alteracoes", valor: "nao" },
+                    { sintoma: "acessoRua", valor: "nao" },
+                    { sintoma: "dificuldadeRespiratorias", valor: "nao" },
+                    { sintoma: "inflamacao", valor: "nao" },
+                    { sintoma: "problemasOculares", valor: "nao" }
+                ],
+                resultado: { doenca: "nenhuma", probabilidade: "90%" }
+            },
+            {
+                condicoes: [
+                    { sintoma: "vermelhidao", valor: "sim" },
+                    { sintoma: "ressecamento", valor: "sim" },
+                    { sintoma: "sonolencia", valor: "sim" }
+                ],
+                resultado: { doenca: "febre", probabilidade: "90%" }
+            },
+            {
+                condicoes: [
+                    { sintoma: "vermelhidao", valor: "sim" },
+                    { sintoma: "ressecamento", valor: "sim" },
+                    { sintoma: "sonolencia", valor: "nao" }
+                ],
+                resultado: { doenca: "febre", probabilidade: "70%" }
+            },
+            {
+                condicoes: [
+                    { sintoma: "vermelhidao", valor: "sim" },
+                    { sintoma: "ressecamento", valor: "nao" },
+                    { sintoma: "sonolencia", valor: "nao" }
+                ],
+                resultado: { doenca: "febre", probabilidade: "80%" }
+            },
+            {
+                condicoes: [
+                    { sintoma: "vermelhidao", valor: "nao" },
+                    { sintoma: "ressecamento", valor: "nao" },
+                    { sintoma: "sonolencia", valor: "nao" }
+                ],
+                resultado: { doenca: "nenhuma", probabilidade: "90%" }
+            }
+        ];
+
+        function avaliarSintomas() {
+            var sintomas = {
+                anemia: document.getElementById("anemia").value,
+                febre: document.getElementById("febre").value,
+                contato: document.getElementById("contato").value,
+                alteracoes: document.getElementById("alteracoes").value,
+                acessoRua: document.getElementById("acessoRua").value,
+                dificuldadeRespiratorias: document.getElementById("dificuldadeRespiratorias").value,
+                inflamacao: document.getElementById("inflamacao").value,
+                problemasOculares: document.getElementById("problemasOculares").value,
+            };
+
+            for (var i = 0; i < regras.length; i++) {
+                var regra = regras[i];
+                var condicoesAtendidas = true;
+                for (var j = 0; j < regra.condicoes.length; j++) {
+                    var condicao = regra.condicoes[j];
+                    if (sintomas[condicao.sintoma] !== condicao.valor) {
+                        condicoesAtendidas = false;
+                        break;
+                    }
+                }
+                if (condicoesAtendidas) {
+                    document.getElementById("resultado").innerText = `Doença: ${regra.resultado.doenca}, Probabilidade: ${regra.resultado.probabilidade}`;
+                    return;
+                }
+            }
+
+            document.getElementById("resultado").innerText = "Nenhuma doença encontrada.";
+        }
+    </script>
+</body>
+</html>

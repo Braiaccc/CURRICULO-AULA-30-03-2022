@@ -1,0 +1,71 @@
+{
+    "regras": [
+      {
+        "condicoes": [
+          { "sintoma": "anemia", "valor": "sim" },
+          { "sintoma": "diarreia", "valor": "sim" },
+          { "sintoma": "febre", "valor": "sim" }
+        ],
+        "resultado": {
+          "felv": "sim",
+          "probabilidade": "90%"
+        }
+      },
+      {
+        "condicoes": [
+          { "sintoma": "anemia", "valor": "nao" },
+          { "sintoma": "diarreia", "valor": "sim" },
+          { "sintoma": "febre", "valor": "sim" }
+        ],
+        "resultado": {
+          "felv": "sim",
+          "probabilidade": "60%"
+        }
+      },
+      {
+        "condicoes": [
+          { "sintoma": "anemia", "valor": "nao" },
+          { "sintoma": "diarreia", "valor": "nao" },
+          { "sintoma": "febre", "valor": "nao" }
+        ],
+        "resultado": {
+          "felv": "nao",
+          "probabilidade": "90%"
+        }
+      },
+      {
+        "condicoes": [
+          { "sintoma": "perda de apetite", "valor": "sim" },
+          { "sintoma": "palidez", "valor": "sim" },
+          { "sintoma": "perda de peso", "valor": "sim" }
+        ],
+        "resultado": {
+          "anemia": "sim",
+          "probabilidade": "90%"
+        }
+      },
+      {
+        "condicoes": [
+          { "sintoma": "perda de apetite", "valor": "sim" },
+          { "sintoma": "palidez", "valor": "sim" },
+          { "sintoma": "perda de peso", "valor": "nao" }
+        ],
+        "resultado": {
+          "anemia": "sim",
+          "probabilidade": "70%"
+        }
+      },
+      {
+        "condicoes": [
+          { "sintoma": "perda de apetite", "valor": "nao" },
+          { "sintoma": "palidez", "valor": "nao" },
+          { "sintoma": "perda de peso", "valor": "nao" }
+        ],
+        "resultado": {
+          "anemia": "nao",
+          "probabilidade": "100%"
+        }
+      }
+    ]
+  }
+  
