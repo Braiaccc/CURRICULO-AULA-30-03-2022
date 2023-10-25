@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro de regras</title>
+</head>
+<body>
+    <h1>Cadastro de regras</h1>
+
+    <form onsubmit="return false" id="form-regras">
+        <input type="text" name="nome" placeholder="Nome da regra" id="nome-regra">
+        <button type="button" id="adicionar-condicoes" onclick="adicionarCondicoes()">+</button>
+        <p>SE</p>
+        <div id="container-regras">
+
+        </div>
+        <p>ENTÃO</p>
+        <div id="container-acao">
+            <select name="variavel" id="variavel-ent">
+            </select>
+            <select name="operador" id="operador-ent">
+            </select>
+            <select name="resultado" id="resultado-ent"></select>
+        </div>
+        <input type="submit" value="Cadastrar" onclick="cadastrarRegra()">
+    </form>
+    <script src="scripts/regras.js"></script>
+    <script src="scripts/salvar_regras.js"></script>
+</body>
+</html>

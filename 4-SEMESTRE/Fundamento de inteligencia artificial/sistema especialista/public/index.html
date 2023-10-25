@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/public/css/style.css">
+    <title>Upgrader</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,body{
+            height: 100%;
+            overflow-y: hidden;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .question {
+            margin: 20px 0;
+        }
+
+        .options label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .center{
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2%;
+        }
+
+        header{
+            height: 200px;
+            padding: 20px 0;
+        }
+
+        .titulo{
+            width: 50%;
+        }
+
+        .menu{
+            padding-top: 30px;
+            width: 50%;
+            text-align: right;
+        }
+
+        .menu a{
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        section.sobre{
+            height: calc(100% - 200px);
+            position: relative;
+        }
+
+        .extras{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="center">
+            <div class="logo">
+                <div class="logo"><img src="/img"></div>
+            </div><!--titulo-->
+            <div class="menu">
+                <nav>
+                    <a href="/vars">Cadastrar Variáveis</a>
+                    <a href="/regras">Cadastrar Regras</a>
+                </nav>
+            </div><!--menu-->
+        </div><!--center-->
+    </header>
+
+    
+    
+    <section class="sobre">
+        <div class="extras">
+
+        </div><!--extras-->
+    </section>
+  
+    <script>
+        document.getElementById('submitIndex').addEventListener('click', function () {
+            var resposta = document.querySelector('input[name="q1"]:checked').value
+
+            if (resposta == "cpu") {
+                window.location.href = "/cpu";
+            }
+            if (resposta == "gpu") {
+                window.location.href = "/gpu";
+            }
+            if (resposta == "memoria") {
+                window.location.href = "/memoria";
+            }
+            if (resposta == "armazenamento") {
+                window.location.href = "/armazenamento";
+            }
+        });
+    </script>
+</body>
+
+</html>
+
+<div class="question">
+    <p>Qual o principal gargalo/defeito no seu computador?</p>
+    <div class="options">
+        <label>
+            <input type="radio" name="q1" value="cpu"> CPU
+        </label>
+        <label>
+            <input type="radio" name="q1" value="gpu"> GPU
+        </label>
+        <label>
+            <input type="radio" name="q1" value="memoria"> Memoria
+        </label>
+        <label>
+            <input type="radio" name="q1" value="armazenamento"> Armazenamento
+        </label>
+    </div>
+</div>
+
+<button id="submitIndex">Enviar Respostas</button>

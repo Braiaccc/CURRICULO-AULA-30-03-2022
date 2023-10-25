@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upgrader</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .question {
+            margin: 20px 0;
+        }
+        .options label {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CPU upgrader</h1>
+
+    <div class="question">
+        <p>Qual o modelo da sua CPU?</p>
+        <div class="options">
+            <label>
+                <input type="radio" name="q1" value="amd"> AMD
+            </label>
+            <label>
+                <input type="radio" name="q1" value="intel"> Intel
+            </label>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>Qual o socket da sua placa mãe?</p>
+        <div class="options">
+            <label>
+                <input type="radio" name="q2" value="LGA 1150"> LGA 1150
+            </label>
+            <label>
+                <input type="radio" name="q2" value="LGA 1151"> LGA 1151
+            </label>
+            <label>
+                <input type="radio" name="q2" value="LGA 1200"> LGA 1200
+            </label>
+            <label>
+                <input type="radio" name="q2" value="AM4"> AM4
+            </label>
+            <label>
+                <input type="radio" name="q2" value="FM2"> FM2
+            </label>
+            <label>
+                <input type="radio" name="q2" value="AM3+"> AM3+
+            </label>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>Como você considera a performance da sua GPU?</p>
+        <div class="options">
+            <label>
+                <input type="radio" name="q3" value="alto"> Alto
+            </label>
+            <label>
+                <input type="radio" name="q3" value="medio"> Médio
+            </label>
+            <label>
+                <input type="radio" name="q3" value="baixo"> Baixo
+            </label>
+        </div>
+    </div>
+
+    <button id="submit">Enviar Respostas</button>
+    <button id="return">Voltar</button>
+
+    <script>
+        document.getElementById('submit').addEventListener('click', function () {
+            // Obter todas as respostas
+            const answers = {
+                q1: document.querySelector('input[name="q1"]:checked').value,
+                q2: document.querySelector('input[name="q2"]:checked').value,
+                q3: document.querySelector('input[name="q3"]:checked').value,
+            }     
+            console.log(answers)    
+        })
+
+        document.getElementById('return').addEventListener('click', function () {
+            window.location.href = "index.html";
+            })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,265 @@
+[
+    {
+        "id": 35,
+        "nomeRegra": "regra35",
+        "condicoes": [
+            {"var": "armazenamento", "op": "==", "value": "hd"},
+            {"var": "suporte_nvme", "op": "==", "value": "sim", "statementOperator": "||"},
+            {"var": "espaço", "op": "==", "value": "pouco espaço", "statementOperator": "||"}
+        ],
+        "entao": {"var": "armazenamento", "value": "Nvme m2 240gb"}
+    },
+    {
+        "id": 36,
+        "nomeRegra": "regra36",
+        "condicoes": [
+            {"var": "armazenamento", "op": "==", "value": "hd"},
+            {"var": "suporte_nvme", "op": "==", "value": "sim", "statementOperator": "||"},
+            {"var": "espaço", "op": "==", "value": "muito espaço", "statementOperator": "||"}
+        ],
+        "entao": {"var": "armazenamento", "value": "Nvme m2 460gb + HD atual secundario"}
+    },
+    {
+        "id": 37,
+        "nomeRegra": "regra37",
+        "condicoes": [
+            {"var": "armazenamento", "op": "==", "value": "hd"},
+            {"var": "suporte_nvme", "op": "==", "value": "nao", "statementOperator": "||"},
+            {"var": "espaço", "op": "==", "value": "pouco espaço", "statementOperator": "||"}
+        ],
+        "entao": {"var": "armazenamento", "value": "SSD sata 240gb"}
+    },
+    {
+        "id": 38,
+        "nomeRegra": "regra38",
+        "condicoes": [
+            {"var": "armazenamento", "op": "==", "value": "hd"},
+            {"var": "suporte_nvme", "op": "==", "value": "nao", "statementOperator": "||"},
+            {"var": "espaço", "op": "==", "value": "muito espaço", "statementOperator": "||"}
+        ],
+        "entao": {"var": "armazenamento", "value": "SSD sata 960gb + HD atual secundario"}
+    },
+    {
+        "id": 39,
+        "nomeRegra": "regra39",
+        "condicoes": [
+            {"var": "armazenamento", "op": "==", "value": "ssd"},
+            {"var": "suporte_nvme", "op": "==", "value": "sim", "statementOperator": "||"},
+            {"var": "espaço", "op": "==", "value": "pouco espaço", "statementOperator": "||"}
+        ],
+        "entao": {"var": "armazenamento", "value": "Nvme 240gb + SSD atual secundario"}
+    },
+    {
+        "id": 40,
+        "nomeRegra": "regra40",
+        "condicoes": [
+            {"var": "armazenamento", "op": "==", "value": "ssd"},
+            {"var": "suporte_nvme", "op": "==", "value": "sim", "statementOperator": "||"},
+            {"var": "espaço", "op": "==", "value": "muito espaço", "statementOperator": "||"}
+        ],
+        "entao": {"var": "armazenamento", "value": "Nvme m2 460gb + HD 1tb atual secundario"}
+    },
+    {
+        "id": 41,
+        "nomeRegra": "regra41",
+        "condicoes": [
+            {"var": "armazenamento", "op": "==", "value": "ssd"},
+            {"var": "suporte_nvme", "op": "==", "value": "nao", "statementOperator": "||"},
+            {"var": "espaço", "op": "==", "value": "pouco espaço", "statementOperator": "||"}
+        ],
+        "entao": {"var": "armazenamento", "value": "HD 300gb secundario ou nada a fazer"}
+    },
+    {
+        "id": 42,
+        "nomeRegra": "regra42",
+        "condicoes": [
+            {"var": "armazenamento", "op": "==", "value": "ssd"},
+            {"var": "suporte_nvme", "op": "==", "value": "nao", "statementOperator": "||"},
+            {"var": "espaço", "op": "==", "value": "muito espaço", "statementOperator": "||"}
+        ],
+        "entao": {"var": "armazenamento", "value": "HD 1tb para armazenamento e ssd atual apenas sistema"}
+    },
+    {
+        "id": 43,
+        "nomeRegra": "regra43",
+        "condicoes": [
+            {"var": "marca_gpu", "op": "==", "value": "amd"},
+            {"var": "finalidade", "op": "==", "value": "jogos", "statementOperator": "||"},
+            {"var": "potencia_fonte", "op": "==", "value": "menos de 500w", "statementOperator": "||"}
+        ],
+        "entao": {"var": "gpu", "value": "AMD Radeon RX 550"}
+    },
+    {
+        "id": 44,
+        "nomeRegra": "regra44",
+        "condicoes": [
+            {"var": "marca_gpu", "op": "==", "value": "amd"},
+            {"var": "finalidade", "op": "==", "value": "trabalho", "statementOperator": "||"},
+            {"var": "desempenho_cpu", "op": "==", "value": "baixo", "statementOperator": "||"},
+            {"var": "potencia_fonte", "op": "==", "value": "mais de 500w", "statementOperator": "||"}
+        ],
+        "entao": {"var": "gpu", "value": "AMD Radeon RX 560"}
+    },
+    {
+        "id": 45,
+        "nomeRegra": "regra45",
+        "condicoes": [
+            {"var": "marca_gpu", "op": "==", "value": "amd"},
+            {"var": "finalidade", "op": "==", "value": "jogos", "statementOperator": "||"},
+            {"var": "desempenho_cpu", "op": "==", "value": "alto", "statementOperator": "||"},
+            {"var": "potencia_fonte", "op": "==", "value": "menos de 500w", "statementOperator": "||"}
+        ],
+        "entao": {"var": "gpu", "value": "AMD Radeon RX 580"}
+    },
+    {
+        "id": 46,
+        "nomeRegra": "regra46",
+        "condicoes": [
+            {"var": "marca_gpu", "op": "==", "value": "amd"},
+            {"var": "finalidade", "op": "==", "value": "trabalho", "statementOperator": "||"},
+            {"var": "desempenho_cpu", "op": "==", "value": "alto", "statementOperator": "||"},
+            {"var": "potencia_fonte", "op": "==", "value": "menos de 500w", "statementOperator": "||"}
+        ],
+        "entao": {"var": "gpu", "value": "AMD Radeon RX 6600XT"}
+    },
+    {
+        "id": 47,
+        "nomeRegra": "regra47",
+        "condicoes": [
+            {"var": "marca_gpu", "op": "==", "value": "amd"},
+            {"var": "finalidade", "op": "==", "value": "jogos", "statementOperator": "||"},
+            {"var": "desempenho_cpu", "op": "==", "value": "baixo", "statementOperator": "||"},
+            {"var": "potencia_fonte", "op": "==", "value": "mais de 500w", "statementOperator": "||"}
+        ],
+        "entao": {"var": "gpu", "value": "AMD Radeon RX 560"}
+    },
+    {
+        "id": 48,
+        "nomeRegra": "regra48",
+        "condicoes": [
+            {"var": "marca_gpu", "op": "==", "value": "amd"},
+            {"var": "finalidade", "op": "==", "value": "trabalho", "statementOperator": "||"},
+            {"var": "desempenho_cpu", "op": "==", "value": "baixo", "statementOperator": "||"},
+            {"var": "potencia_fonte", "op": "==", "value": "mais de 500w", "statementOperator": "||"}
+        ],
+        "entao": {"var": "gpu", "value": "AMD Radeon RX 5500XT"}
+    },
+    {
+        "id": 49,
+        "nomeRegra": "regra49",
+        "condicoes": [
+            {"var": "marca_gpu", "op": "==", "value": "amd"},
+            {"var": "finalidade", "op": "==", "value": "jogos", "statementOperator": "||"},
+            {"var": "desempenho_cpu", "op": "==", "value": "alto", "statementOperator": "||"},
+            {"var": "potencia_fonte", "op": "==", "value": "mais de 500w", "statementOperator": "||"}
+        ],
+        "entao": {"var": "gpu", "value": "AMD Radeon RX 6700XT"}
+    },
+    {
+        "id": 50,
+        "nomeRegra": "regra50",
+        "condicoes": [
+            {"var": "marca_gpu", "op": "==", "value": "amd"},
+            {"var": "finalidade", "op": "==", "value": "trabalho", "statementOperator": "||"},
+            {"var": "desempenho_cpu", "op": "==", "value": "alto", "statementOperator": "||"},
+            {"var": "potencia_fonte", "op": "==", "value": "mais de 500w", "statementOperator": "||"}
+        ],
+        "entao": {"var": "gpu", "value": "AMD Radeon RX 6900XT"}
+    },
+    {
+        "id": 51,
+        "nomeRegra": "regra51",
+        "condicoes": [
+            {"var": "gargalo", "op": "==", "value": "gpu"},
+            {"var": "marca_gpu", "op": "==", "value": "nvidia", "statementOperator": "||"},
+            {"var": "finalidade", "op": "==", "value": "jogos", "statementOperator": "||"},
+            {"var": "desempenho_cpu", "op": "==", "value": "baixo", "statementOperator": "||"},
+            {"var": "potencia_fonte", "op": "==", "value": "menos de 500w", "statementOperator": "||"}
+        ],
+        "entao": {"var": "gpu", "value": "NVIDIA GeForce GT 1030"}
+    },
+    {
+        "id": 52,
+        "nomeRegra": "regra52",
+        "condicoes": [
+            {"var": "gargalo", "op": "==", "value": "gpu"},
+            {"var": "marca_gpu", "op": "==", "value": "nvidia", "statementOperator": "||"},
+            {"var": "finalidade", "op": "==", "value": "trabalho", "statementOperator": "||"},
+            {"var": "desempenho_cpu", "op": "==", "value": "baixo", "statementOperator": "||"},
+            {"var": "potencia_fonte", "op": "==", "value": "menos de 500w", "statementOperator": "||"}
+        ],
+        "entao": {"var": "gpu", "value": "NVIDIA GeForce GTX 1050"}
+    },
+    {
+        "id": 53,
+        "nomeRegra": "regra53",
+        "condicoes": [
+            {"var": "gargalo", "op": "==", "value": "gpu"},
+            {"var": "marca_gpu", "op": "==", "value": "nvidia", "statementOperator": "||"},
+            {"var": "finalidade", "op": "==", "value": "jogos", "statementOperator": "||"},
+            {"var": "desempenho_cpu", "op": "==", "value": "alto", "statementOperator": "||"},
+            {"var": "potencia_fonte", "op": "==", "value": "menos de 500w", "statementOperator": "||"}
+        ],
+        "entao": {"var": "gpu", "value": "NVIDIA GeForce GTX 1660"}
+    },
+    {
+        "id": 54,
+        "nomeRegra": "regra54",
+        "condicoes": [
+            {"var": "gargalo", "op": "==", "value": "gpu"},
+            {"var": "marca_gpu", "op": "==", "value": "nvidia", "statementOperator": "||"},
+            {"var": "finalidade", "op": "==", "value": "trabalho", "statementOperator": "||"},
+            {"var": "desempenho_cpu", "op": "==", "value": "baixo", "statementOperator": "||"},
+            {"var": "potencia_fonte", "op": "==", "value": "menos de 500w", "statementOperator": "||"}
+        ],
+        "entao": {"var": "gpu", "value": "NVIDIA GeForce GTX 1660 SUPER"}
+    },
+    {
+        "id": 55,
+        "nomeRegra": "regra55",
+        "condicoes": [
+            {"var": "gargalo", "op": "==", "value": "gpu"},
+            {"var": "marca_gpu", "op": "==", "value": "nvidia", "statementOperator": "||"},
+            {"var": "finalidade", "op": "==", "value": "jogos", "statementOperator": "||"},
+            {"var": "desempenho_cpu", "op": "==", "value": "baixo", "statementOperator": "||"},
+            {"var": "potencia_fonte", "op": "==", "value": "mais de 500w", "statementOperator": "||"}
+        ],
+        "entao": {"var": "gpu", "value": "NVIDIA GeForce GTX 1050"}
+    },
+    {
+        "id": 56,
+        "nomeRegra": "regra56",
+        "condicoes": [
+            {"var": "gargalo", "op": "==", "value": "gpu"},
+            {"var": "marca_gpu", "op": "==", "value": "nvidia", "statementOperator": "||"},
+            {"var": "finalidade", "op": "==", "value": "trabalho", "statementOperator": "||"},
+            {"var": "desempenho_cpu", "op": "==", "value": "baixo", "statementOperator": "||"},
+            {"var": "potencia_fonte", "op": "==", "value": "mais de 500w", "statementOperator": "||"}
+        ],
+        "entao": {"var": "gpu", "value": "NVIDIA GeForce GTX 1050 TI"}
+    },
+    {
+        "id": 57,
+        "nomeRegra": "regra57",
+        "condicoes": [
+            {"var": "gargalo", "op": "==", "value": "gpu"},
+            {"var": "marca_gpu", "op": "==", "value": "nvidia", "statementOperator": "||"},
+            {"var": "finalidade", "op": "==", "value": "jogos", "statementOperator": "||"},
+            {"var": "desempenho_cpu", "op": "==", "value": "alto", "statementOperator": "||"},
+            {"var": "potencia_fonte", "op": "==", "value": "mais de 500w", "statementOperator": "||"}
+        ],
+        "entao": {"var": "gpu", "value": "NVIDIA GeForce GTX 3060"}
+    },
+    {
+        "id": 58,
+        "nomeRegra": "regra58",
+        "condicoes": [
+            {"var": "gargalo", "op": "==", "value": "gpu"},
+            {"var": "marca_gpu", "op": "==", "value": "nvidia", "statementOperator": "||"},
+            {"var": "finalidade", "op": "==", "value": "trabalho", "statementOperator": "||"},
+            {"var": "desempenho_cpu", "op": "==", "value": "alto", "statementOperator": "||"},
+            {"var": "potencia_fonte", "op": "==", "value": "mais de 500w", "statementOperator": "||"}
+        ],
+        "entao": {"var": "gpu", "value": "NVIDIA GeForce GTX 3090"}
+    }
+]
