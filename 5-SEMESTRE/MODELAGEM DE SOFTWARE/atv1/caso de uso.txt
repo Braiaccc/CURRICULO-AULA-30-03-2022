@@ -1,0 +1,34 @@
+Ator Principal: Usuário
+Pré-condição: Ter vaga no estacionamento.
+Fluxo Principal:
+O usuário emite um ticket de estacionamento.
+O ticket registra um id e um QR code.
+O sistema libera a cancela para o carro passar.
+Extensões:
+Se o o estacionamento não tiver vagas, o sistema informa ao usuário sobre a situação.
+Pagar ticket
+
+
+
+
+Ator Principal: Usuário
+Pré-condição: Ter o ticket.
+Fluxo Principal:
+O usuário lê o QR code do ticket em um app.
+O QR code abre uma tela de pagamento via pix ou cartão.
+Após o pagamento uma mensagem de pagamento confirmado é emitida.
+Extensões:
+Se o usuário precisa pagar em dinheiro, necessário passar na cancela e pagar para um funcionário, e o mesmo fará a liberação da cancela manualmente.
+Apresentar o ticket pago
+
+
+
+
+Ator Principal: Usuário
+Pré-condição: Ter o ticket pago.
+Fluxo Principal:
+O usuário apresenta o QR code do ticket para a cancela que vai ler o mesmo.
+Se estiver pago, libera a cancela.
+Após a liberação, o carro pode passar normalmente.
+Extensões:
+Se o sistema identificar que não foi pago, a cancela não abre.

@@ -1,0 +1,11 @@
+falando agora em questão da tela de inicio, é uma tela bem dinamica, mostrando as ofertas ou novidade do dia. Em questão das heuristicas, ele é um site bem construido, obvio. 
+1- Ele possui a visibilidade
+2- as correspondencia pra identificar o que é cada coisa,
+3- não encontrei um controle e liberdade(só talvez no simbolo da nike, que retrocede para tela de inicio)
+4- tem consitencia e padronização, a tela de inicio troca, mas segue o mesmo modelo,
+5-não tem prevençao de erros, até pq não tinha nenhum erro relevante, 
+6-Ele tem alguns reconhecimentos, ali no mostrar mais eu diria que seja um
+7-é um site bem eficiente(vai direto ao ponto)
+8-tem um estetica bem flexivel e dinamica 
+9-mesma coisa que o 5, não tinha recuperação de erros, pq não possuia erros,
+10- é em questão das ajudas, termo, sobre e algumas coisas a mais...
