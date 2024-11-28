@@ -32,7 +32,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="16dp"
-                android:background="@drawable/dex"
+                android:background="@drawable/amarelao"
                 android:foregroundGravity="center"
                 android:gravity="center"
                 android:textColor="@color/black"
