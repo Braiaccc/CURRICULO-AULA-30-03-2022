@@ -1,3 +1,4 @@
+import 'package:as_dsm/auth/auth_service.dart';
 import 'package:as_dsm/components/my_button.dart';
 import 'package:flutter/material.dart';
 import 'package:as_dsm/components/my_textfield.dart';
@@ -7,11 +8,28 @@ class LoginPage extends StatelessWidget {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _pwController = TextEditingController();
 
-  LoginPage ({super.key});
+  final void Function()? onTap;
 
-  void login() {
+  LoginPage ({super.key, required this.onTap});
 
+  void login(BuildContext context) async{
+    final authService = AuthService();
+
+    try {
+      await authService.signInWithEmailPassword(_emailController.text, _pwController.text);
+    }
+
+    catch (e) {
+      showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+        title: Text(e.toString()),
+        ),
+      );
+    }
   }
+
+
     @override
   Widget build(BuildContext context) {
       return Scaffold(
@@ -55,18 +73,21 @@ class LoginPage extends StatelessWidget {
                 //Botão do login
                 MyButton(
                   text: "LOGIN",
-                  onTap: login,
+                  onTap: () => login(context),
                 ),
                 
                 const SizedBox(height: 24),
 
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("Não tem conta? "),
-                    Text("REGISTRE-SE",
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
+                    GestureDetector(
+                      onTap: onTap,
+                      child: const Text("REGISTRE-SE",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ],

@@ -1,3 +1,5 @@
+
+import 'package:as_dsm/auth/auth_service.dart';
 import 'package:flutter/material.dart';
 
 import '../components/my_button.dart';
@@ -7,7 +9,42 @@ class RegisterPage extends StatelessWidget {
 
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _pwController = TextEditingController();
-  RegisterPage({super.key});
+  final TextEditingController _confirmPwController = TextEditingController();
+  final void Function()? onTap;
+
+  RegisterPage({super.key, required this.onTap});
+
+
+
+  void register(BuildContext context) {
+    final _auth = AuthService();
+
+    if (_pwController.text == _confirmPwController.text) {
+      try {
+        _auth.signUpWithEmailPassword(
+            _emailController.text,
+            _pwController.text
+        );
+      } catch (e) {
+        showDialog(
+          context: context,
+          builder: (context) =>
+              AlertDialog(
+                title: Text(e.toString()),
+              ),
+        );
+       }
+      }
+    else {
+      showDialog(
+        context: context,
+        builder: (context) =>
+        const AlertDialog(
+          title: Text("As senhas não correspondem"),
+        ),
+      );
+      }
+    }
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +61,7 @@ class RegisterPage extends StatelessWidget {
 
               const SizedBox(height: 50),
               //Boas vindas
-              const Text("Bem vindo a Pokedex",
+              const Text("Criar conta para pokedex",
                 style: TextStyle(
                   fontSize: 16,
                 ),
@@ -42,9 +79,17 @@ class RegisterPage extends StatelessWidget {
               const SizedBox(height: 10),
               //SENHA
               MyTextField(
-                hintText: 'PASSWORD',
+                hintText: 'SENHA',
                 obscureText: true,
                 controller: _pwController,
+              ),
+
+              const SizedBox(height: 10),
+              //confirme a senha
+              MyTextField(
+                hintText: 'CONFIRME A SENHA',
+                obscureText: true,
+                controller: _confirmPwController,
               ),
 
               const SizedBox(height: 24),
@@ -52,18 +97,21 @@ class RegisterPage extends StatelessWidget {
               //Botão do login
               MyButton(
                 text: "REGISTER",
-                onTap: login,
+                onTap: () => register(context),
               ),
 
               const SizedBox(height: 24),
 
-              const Row(
+              Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text("Não tem conta? "),
-                  Text("REGISTRE-SE",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
+                  Text("Já possui um conta? "),
+                  GestureDetector(
+                    onTap: onTap,
+                    child: Text("Logar",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ],

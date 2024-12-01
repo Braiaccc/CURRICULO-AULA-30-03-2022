@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "885247523559",
+    "project_id": "pokemonasauth",
+    "storage_bucket": "pokemonasauth.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:885247523559:android:af127f25c1e2e343e94042",
+        "android_client_info": {
+          "package_name": "com.pokedex.example.as_dsm"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCF71LfujyH3fPovQGcL0Buv_xDszetWBY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
