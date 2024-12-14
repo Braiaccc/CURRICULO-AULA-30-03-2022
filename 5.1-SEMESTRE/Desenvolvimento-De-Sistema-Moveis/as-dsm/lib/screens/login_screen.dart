@@ -81,7 +81,7 @@ class LoginPage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("Não tem conta? "),
+                    const Text("Não tem conta? "),
                     GestureDetector(
                       onTap: onTap,
                       child: const Text("REGISTRE-SE",
